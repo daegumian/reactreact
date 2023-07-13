@@ -1,16 +1,13 @@
-import IterationComponent2 from "./component/IterationComponent2";
+import {Fragment} from 'react';
+import HookEffect from "./hook/HookEffect";
 
-function App () {
+function App() {
+  return(
 
-  return (
+    <Fragment>
+      <HookEffect/>
 
-    <div>
-      <IterationComponent2/>
-
-    </div>
-
+    </Fragment>
   )
-
 }
-
 export default App;

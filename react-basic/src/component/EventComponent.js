@@ -6,7 +6,7 @@ function EventComponent () {
   const [topic, setTopic] = useState('');
 
   const handleChange = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     setName(e.target.value)
     //마지막으로 input의 value속성에 리액트의 state를 적는다.
   }
