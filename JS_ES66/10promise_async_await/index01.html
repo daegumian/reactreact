@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //1.promis객체란? => es6 내장객체
+
+
+        let promise = new Promise( function (success, fail){
+
+            setTimeout(() => {
+                success('성공했다')
+            }, 5000)
+            fail(new Error('이거 에러다'))
+        
+        });
+
+        //then절은 성공을 돌려받는 콜백함수를 정의함
+        //catch절은 에러를 돌려받을 콜백함수를 정의함
+        promise.then((data)=>{
+            console.log(data);
+        }).catch( (err)=>{
+            console.log(err);
+        })
+
+        
+
+
+
+    </script>
+
+
+
+</body>
+</html>
