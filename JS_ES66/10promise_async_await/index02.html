@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        //이런 형태로 사용하게 되면 비동기적 실행이 10초가 걸림
+        //10초동안 대기하고 있어야함.
+        
+        //1st
+        // function myFetch(url) {
+        //     //10초 동안 비동기적 실행....
+        //     return "결과반환"
+        // }
+
+        // const result = myFetch('~~~');
+        // console.log(result);
+
+        //프로미스에서 then함수를 콜백함수로 받으면, 
+        //비동기적으로 바껴서 다른 것들은 다 호출되고 완료됐을 때 나온다.
+        // function myFetch(url){
+
+        //2nd
+        //     return new Promise( function(success, fail){
+        //         success('결과 반환~');
+        //     });
+        // }
+
+        
+        // 1. async를 붙이면 자동으로 리턴이 promise로 변환됨
+        async function myFetch(url){
+            return "결과반환"
+        }
+        /* 
+        console.log(1);
+
+        myFetch("~~~").then(function(result){
+            console.log(result);
+            console.log(2);
+        })
+        console.log(3);
+        */
+
+        //2. async안에서 await 키워드를 사용할 수 있다.
+        //3. return이 promise라면 await을 붙이고 then절을 생략할 수 있다.
+        (async () => {
+            const result = await myFetch('~~~');
+            console.log(result);
+            
+        })();
+      
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

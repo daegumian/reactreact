@@ -1,0 +1,15 @@
+.header{
+    display: flex; /* item 3개임 :ul,h3,div */
+    justify-content: space-between;
+    background-color: aqua;
+}
+
+.header .ul {
+    display: flex;
+    justify-content:space-between;
+    list-style: none;
+    width: 30%;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
